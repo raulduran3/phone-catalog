@@ -4,7 +4,7 @@ A MERN stack app to perfom CRUD on phones.
 - Server: RESTful API built with `Node.js` using `Express.js`
 - Database: `MongoDB`
 
-Both the server and client are deployed in the following sites:
+Both the server and client are deployed on the following sites:
 - [Server](https://phone-catalo.herokuapp.com/phones)
 - [Client](https://phone-catalog-app.netlify.app)
 
