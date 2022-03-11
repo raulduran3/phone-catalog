@@ -1,4 +1,14 @@
-# Phone Catalog :)
+# Phone Catalog
+A MERN stack app to perfom CRUD on phones.
+- Client: `React.js` and styling with `Material-UI`
+- Server: RESTful API built with `Node.js` using `Express.js`
+- Database: `MongoDB`
+
+Both the server and client are deployed in the following sites:
+- [Server](https://phone-catalo.herokuapp.com/phones)
+- [Client](https://phone-catalog-app.netlify.app)
+
+## Installation & Run
 To view the app run the following commands:
 ```
 git clone https://github.com/raulduran3/phone-catalog.git
@@ -21,7 +31,39 @@ yarn start
 cd server
 yarn start
 ```
+## Structure
+```
+├── phone-catalog
+│   ├── client
+│   │   ├── src          
+│   │   │   ├── actions
+│   │   │   │   └── phones.js           // Actions for phones
+│   │   │   ├── api
+│   │   │   │   └── index.js            // Connect to API and declare requests  
+│   │   │   ├── components
+│   │   │   ├── constants
+│   │   │   │   └── actionTypes.js      // Action types for requests for phones
+│   │   │   ├── reducers
+│   │   │   │   ├── index.js            
+│   │   │   │   └── phones.js           // Reducers for phones
+│   │   │   ├── views
+│   │   │   └── App.js 
+│   ├── server
+│   │   ├── controllers          
+│   │   │   └── phones.js                // Response functions of phones
+│   │   ├── models
+│   │   │   └── phoneData.js             // Model of phone
+│   │   ├── routes
+│   │   │   └── phones.js                // Routes for phones
+│   │   ├── index.js
+│   │   └── Procfile                     // Procfile for deploying to Heroku
+```
+## API
+#### /phones
+* `GET` : Get all phones
+* `POST` : Create a new phone
 
-Both the server and client are deployed in the following sites:
-- [Server](https://phone-catalo.herokuapp.com/phones)
-- [Client](https://phone-catalog-app.netlify.app)
+#### /phones/:id
+* `GET` : Get a phone
+* `PATCH` : Update a phone
+* `DELETE` : Delete a phone
