@@ -23,5 +23,5 @@ yarn start
 ```
 
 Both the server and client are deployed in the following sites:
-Server: https://phone-catalo.herokuapp.com/phones
-Client: https://phone-catalog-app.netlify.app
+- [Server](https://phone-catalo.herokuapp.com/phones)
+- [Client](https://phone-catalog-app.netlify.app)
