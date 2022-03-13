@@ -1,4 +1,3 @@
-import "./App.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import NavigationComp from "./components/Navigation";
 import CreatePhoneView from "./views/CreatePhoneView";
