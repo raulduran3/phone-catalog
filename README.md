@@ -31,6 +31,13 @@ yarn start
 cd server
 yarn start
 ```
+
+To only run the client, change the url in `phone-catalog/client/api/index.js` to https://phone-catalo.herokuapp.com/phones, and run the following commands:
+```
+cd client
+yarn start
+```
+
 ## Structure
 ```
 ├── phone-catalog
@@ -39,7 +46,7 @@ yarn start
 │   │   │   ├── actions
 │   │   │   │   └── phones.js           // Actions for phones
 │   │   │   ├── api
-│   │   │   │   └── index.js            // Connect to API and declare requests  
+│   │   │   │   └── index.js            // API requests  
 │   │   │   ├── components
 │   │   │   ├── constants
 │   │   │   │   └── actionTypes.js      // Action types for requests for phones
@@ -59,6 +66,20 @@ yarn start
 │   │   └── Procfile                     // Procfile for deploying to Heroku
 ```
 ## API
+#### Phone Schema
+
+|   |  |
+| - |-|
+| name      | String     |
+| manufacturer      | String     |
+| descrpition      | String     |
+| color      | String     |
+| price      | Number     |
+| imageFileName      | String     |
+| screen      | String     |
+| processor      | String     |
+| ram      | String     |
+
 #### /phones
 * `GET` : Get all phones
 * `POST` : Create a new phone
