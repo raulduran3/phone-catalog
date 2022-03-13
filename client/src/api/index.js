@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "http://localhost:5000/phones";
+export const url = "http://localhost:5000/phones";
 
 export const fetchPhones = () => axios.get(url);
 export const createPhone = (newPhone) => axios.post(url, newPhone);
