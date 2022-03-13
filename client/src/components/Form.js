@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   spinner: {
     position: "fixed",
     top: "43%",
-    left: "47%",
+    left: "48.5%",
   },
 }));
 
