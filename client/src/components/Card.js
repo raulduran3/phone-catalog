@@ -24,7 +24,12 @@ const CardComp = ({ phone, setLoadingState, detail }) => {
   return (
     <>
       <Card>
-        <CardMedia component="img" image={phone.imageFileName} alt="phone" />
+        <CardMedia
+          height={detail ? "100%" : 300}
+          component="img"
+          image={phone.imageFileName}
+          alt="phone"
+        />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {phone.name}
