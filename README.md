@@ -72,7 +72,7 @@ yarn start
 | - |-|
 | name      | String     |
 | manufacturer      | String     |
-| descrpition      | String     |
+| description      | String     |
 | color      | String     |
 | price      | Number     |
 | imageFileName      | String     |
