@@ -1,13 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 import Grid from "@material-ui/core/Grid";
 import { useLocation } from "react-router-dom";
+import CardComp from "../components/Card";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,6 +29,7 @@ const PhoneView = () => {
   const classes = useStyles();
   const location = useLocation();
   const { from } = location.state;
+  const phone = { ...from };
 
   return (
     <div className={classes.root}>
@@ -39,95 +37,7 @@ const PhoneView = () => {
         <Paper className={classes.paper}>
           <Grid className={classes.container} container spacing={3}>
             <Grid item xs={12}>
-              <Card>
-                <CardMedia
-                  component="img"
-                  image={from.imageFileName}
-                  alt="phone"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {from.name}
-                  </Typography>
-                  <Typography variant="body2" color="textPrimary">
-                    {from.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-              <Grid container>
-                <Grid item xs={6}>
-                  <Card>
-                    <CardContent>
-                      <Typography gutterBottom variant="h6" component="div">
-                        Color
-                      </Typography>
-                      <Typography variant="body2" color="textPrimary">
-                        {from.color}
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item xs={6}>
-                  <Card>
-                    <CardContent>
-                      <Typography gutterBottom variant="h6" component="div">
-                        Manufacturer
-                      </Typography>
-                      <Typography variant="body2" color="textPrimary">
-                        {from.manufacturer}
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item xs={6}>
-                  <Card>
-                    <CardContent>
-                      <Typography gutterBottom variant="h6" component="div">
-                        Price
-                      </Typography>
-                      <Typography variant="body2" color="textPrimary">
-                        {from.price}
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item xs={6}>
-                  <Card>
-                    <CardContent>
-                      <Typography gutterBottom variant="h6" component="div">
-                        Processor
-                      </Typography>
-                      <Typography variant="body2" color="textPrimary">
-                        {from.processor}
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item xs={6}>
-                  <Card>
-                    <CardContent>
-                      <Typography gutterBottom variant="h6" component="div">
-                        Ram
-                      </Typography>
-                      <Typography variant="body2" color="textPrimary">
-                        {from.ram}
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item xs={6}>
-                  <Card>
-                    <CardContent>
-                      <Typography gutterBottom variant="h6" component="div">
-                        Screen
-                      </Typography>
-                      <Typography variant="body2" color="textPrimary">
-                        {from.screen}
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              </Grid>
+              <CardComp phone={phone} detail />
             </Grid>
           </Grid>
         </Paper>
